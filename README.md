@@ -2,6 +2,8 @@
 
 A robust, full-stack solution designed to streamline inventory and sales for boutique sweet shops. Built with performance and scalability in mind using the modern PERN/SERN stack (PostgreSQL/SQLite, Express, React, Node).
 
+**Developed by Vishal**
+
 ## Project Overview
 
 This application serves as a centralized dashboard for store owners to manage their confectionery inventory ("Sweets") in real-time. It features secure role-based authentication, separating customer purchase flows from administrative stock management.

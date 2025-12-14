@@ -1,0 +1,33 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Production
+dist
+build
+
+# Misc
+.DS_Store
+.env
+.npm
+*.log
+
+# Prisma
+*.db
+*.db-journal
+
+# IDEs
+.vscode
+.idea
+
+# Local specific
+Antigravity.exe
+test_write_d.txt
+.npm-cache
+backend/.npm-cache
+frontend/.npm-cache
+*.exe

@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: sweet-shop
+    env: node
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build && cd ../backend && npm install && npx prisma migrate deploy
+    startCommand: cd backend && npm run dev
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        value: file:./dev.db
+    disk:
+      name: sqlite-data
+      mountPath: /opt/render/project/src/backend/prisma
+      sizeGB: 1

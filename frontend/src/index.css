@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap');
+
+:root {
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --accent: #ffe66d;
+  --paper: #f7f1e3;
+  --ink: #2d3436;
+  --shadow-offset: 4px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Patrick Hand', cursive;
+  background-color: var(--paper);
+  background-image: radial-gradient(#d1ccc0 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 1px;
+  transform: rotate(-1deg);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Hand-drawn Box Style */
+.sketch-box {
+  background: white;
+  border: 3px solid var(--ink);
+  border-radius: 2px 255px 3px 25px / 255px 5px 225px 3px;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--ink);
+  transition: all 0.2s ease;
+}
+
+.sketch-box:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0 var(--ink);
+}
+
+/* Auth Card Specifics */
+.auth-card {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border: 3px solid var(--ink);
+  border-radius: 5px;
+  box-shadow: 8px 8px 0 var(--ink);
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 25px;
+  background: var(--primary);
+  color: white;
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: all 0.1s;
+  display: inline-block;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+button.secondary {
+  background: var(--secondary);
+}
+
+button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid var(--ink);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.2rem;
+  background: white;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #fff5f5;
+  transform: scale(1.01) rotate(0.5deg);
+}
+
+/* Sweet Grid */
+.sweet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.sweet-card {
+  background: white;
+  border: 3px solid var(--ink);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.sweet-header {
+  background: var(--accent);
+  padding: 20px;
+  border-bottom: 3px solid var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.sweet-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  margin: 60px 0;
+  padding: 40px;
+  background: var(--accent);
+  border: 3px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--ink);
+  transform: rotate(-1deg);
+}
+
+.hero-search {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
